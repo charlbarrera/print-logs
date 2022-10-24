@@ -3,7 +3,7 @@ const { TempList, TempObj } = require("../lib/temp-log-queu")
 // Print all entries, across all of the sources, in chronological order.
 
 // in certain circumstances this will be a linear time complexity and the worst case
-// will be O(n^2)
+// will be O(n + log(n))
 module.exports = (logSources, printer) => {
   const tempList = new TempList(logSources);
 

@@ -17,7 +17,7 @@ module.exports = (logSources, printer) => {
     while (logsInQueue) {
       printer.print(currentLog);    
       const source = currentLog.logSourceNumber;
-      const newLog = await logSources[source].popAsync(); // the only difference here
+      const newLog = await logSources[source].popAsync(); // the only difference is here
       if (!newLog) {
         if (!tempList.data.length) {
           logsInQueue = false;
